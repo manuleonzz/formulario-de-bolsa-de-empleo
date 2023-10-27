@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manuel Leon</title>
+</head>
+<body>
+   <header style="text-align: center;"> 
+    <h2>Manuel Leon</h2>
+   </header>
+<form action="./recorrer/recorrer.php" method="post">
+   <fieldset>
+    <legend>Detalles del contacto</legend>
+    <label for="dni">DNI:</label>
+    <input type="text" class="text" autofocus placeholder="Escriba su DNI" name="dni" required pattern="[0-9]{8}[a-zA-Z\s]{1}"/>
+    <span class="invalid">* El DNI es requerido</span>
+    <br>
+
+    <label for="nombre">Nombre:</label>
+    <input type="text" class="text" placeholder="Escribe tu nombre" name="nombre" required pattern="[a-zA-Z\s]{1,20}"/>
+    <span class="invalid">* El nombre es requerido</span>
+    <br>
+   
+    <label for="apellido1">Apellido1:</label>
+    <input type="text" name="apellido1" required placeholder="Escriba su apellido1" class="text" required pattern="[a-zA-Z\s]{1,20}"/>
+    <span class="invalid">* El apellido1 es requerido</span>
+    <br>
+
+    <label for="apellido2">Apellido2:</label>
+    <input type="text" class="text" autofocus placeholder="Escriba su apellido2" name="apellido2" pattern="[a-zA-Z\s]{1,20}"/>
+    <br>
+
+    <label for="Direccion">Direccion:</label>
+    <input type="text" class="text" autofocus placeholder="Escriba su Direccion" name="Direccion" required pattern="[a-zA-Z\s]{1,80}"/>
+    <br>
+
+    <label for="codp">Código postal</label>
+    <input type="text" name="Codigo postal" required placeholder="Escribe tu Código postal" pattern="[0-9]{5,}">
+    <br>
+    <label for="Poblacion">Poblacion:</label>
+    <input type="text" name="Poblacion" placeholder="Escribe tu Poblacion"/>
+    <br>
+
+    <label for="provincia">Provincia</label>
+    <select id="provincia" name="provincia">
+        <option value="sevilla">Sevilla</option>
+        <option value="valencia">Valencia</option>
+        <option value="cadiz">Cadiz</option>
+        <option value="malaga">Malaga</option>
+    </select>
+    <br>
+    <label for="nacimiento">Fecha Nacimiento</label>
+    <input type="date" name="nacimiento" min="1990-01-01" max="3000-12-31"/>
+    <br>
+
+    <label for="Sexo">Sexo</label>
+    <select id="Sexo" name="Sexo">
+        <option value="Hombre">Hombre</option>
+        <option value="Mujer">Mujer</option>
+    </select>
+    <br>
+    <label for="telefono">Telefono</label>
+    <input type="text" name="telefono" required placeholder="Escribe tu Teléfono" pattern="[0-9]{5,}">
+    <br>
+
+    <label for="email">Email</label>
+    <input type="email" name="Email" required placeholder="Escribe tu Email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}">
+    <br>
+       
+    <input type="submit" value="Enviar" id="enviar"/>
+   </fieldset>
+
+   <fieldset>
+    <legend>Formación y experiencia</legend>
+    <label for="estcur">Estudios cursados</label>
+    <select id="estcur" name="estcur">
+        <option value="ciclome">Ciclo grado medio</option>
+        <option value="ciclosu">Ciclo grado superior</option>
+    </select>
+    <br>
+    <label for="titulo">Título:</label>
+    <input type="text" class="text" autofocus placeholder="Escribe tu título" name="titulo" required pattern="[a-zA-Z\s]{1,20}"/>
+    <br>
+    <label for="experiencia">Experiencia laboral:</label>
+    <input type="radio" name="experiencia" value="si">Sí 
+    <input type="radio" name="experiencia" value="no">No
+    <br>
+    <label for="idiomas">Idiomas:</label>
+    <select id="idiomas" name="idiomas">
+        <option value="es">Español</option>
+        <option value="in">Inglés</option>
+        <option value="fr">Francés</option>
+    </select>
+    Otros
+    <textarea name="otros_idiomas" id="" cols="10" rows="5" placeholder="Especifique otros idiomas"></textarea>
+    <br>   
+    <label for="cv">CV:</label>
+    <input type="file" name="cv">
+   </fieldset>
+
+   <fieldset>
+    <legend>Acceso al portal</legend> 
+    <label for="us">Usuario:</label>
+    <input type="text" class="text" autofocus placeholder="Escribe tu nombre de usuario" name="us" required pattern="[a-zA-Z\s]{}"/>
+    <br>
+    <label for="cn">Contraseña:</label>
+    <input type="password" name="cn">
+   </fieldset>
+   <input type="submit" value="Enviar formulario" style="background-color: rgba(39, 39, 232, 0.604);">
+   <input type="reset" value="Limpiar" style="background-color: rgba(39, 39, 232, 0.604);">
+
+</form>
+
+</body>
+</html>
